@@ -35,3 +35,5 @@ CREATE TABLE IF NOT EXISTS product_tag (
     FOREIGN KEY (product_id) REFERENCES product(id),
     FOREIGN KEY (tag_id) REFERENCES tag(id)
 );
+
+-- cd 
