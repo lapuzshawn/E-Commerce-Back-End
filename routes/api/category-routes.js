@@ -14,6 +14,11 @@ router.get('/', (req, res) => {
       },
     ],
   })
+  .then((categories) => res.status(200).json(categories))
+  .catch((err) => {
+    console.log(err);
+    res.status(500).json(err);
+  })
 });
 
 router.get('/:id', (req, res) => {
@@ -30,6 +35,7 @@ router.get('/:id', (req, res) => {
       }
     ]
   })
+  .then((category) => res.status(200).json(category))
 });
 
 router.post('/', (req, res) => {
